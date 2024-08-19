@@ -12,11 +12,12 @@ builder.Services.AddDbContext<SalesWebMvcContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Service adicionada para popular o banco de dados. Aula 261
+//Service adicionada para popular o banco de dados. Aula 261
 builder.Services.AddScoped<SeedingService>();
 
-//Service referente a classe SellerService
+//Services referentes as classes Service
 builder.Services.AddScoped<SellerService>();
+builder.Services.AddScoped<DepartmentService>();
 
 var app = builder.Build();
 
